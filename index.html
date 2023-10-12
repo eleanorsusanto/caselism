@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Caselism </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="home">
+        <header>
+            <div class="logo"><a href="#home">Case<span>lism</span></a></div>
+            <div class="toggle"></div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Best<span class="color"> Custom Case</span><br> Here!</h2>
+                <p>We sell high quality case made with finest technology <br>and extra caring.</p>
+                <a href="" class="btn">Our Products</a>
+            </div>
+            <div class ="pic">
+                <img src="./assets/hard1.jpg" class="imgs">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./assets/hard1.jpg" onclick="imgSlider('./assets/hard1.jpg');
+                changeColor('#F1B4BB');changeButton('#F1B4BB')"></li>
+            <li><img src="./assets/jelly.webp" onclick="imgSlider('./assets/jelly.webp');
+                changeColor('#ED8625');changeButton('#ED8625')"></li>
+            <li><img src="./assets/hybrid.webp" onclick="imgSlider('./assets/hybrid.webp');
+                changeColor('#EEE2CB');changeButton('#EEE2CB')"></li>
+        </ul>
+        <ul class="soc">
+            <li><a href=""><img src="./assets/facebook.png"></a></li>
+            <li><a href=""><img src="./assets/instagram.png"></a></li>
+            <li><a href=""><img src="./assets/shopee.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.imgs').src = anything;
+        }
+
+        function changeColor(color){
+            const text = document.querySelector('.color');
+            text.style.color = color;
+        }
+
+        function changeButton(color){
+            const button = document.querySelector('.btn');
+            button.style.background = color;
+        }
+    </script>
+</body>
+</html>
